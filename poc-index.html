@@ -1,3 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de eBook</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #e9edf2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            width: 100%;
+            max-width: 650px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Topo: Texto e Capa do Livro */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .text-section {
+            flex: 1;
+        }
+
+        .text-section h2 {
+            color: #a3339d;
+            font-size: 28px;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .text-section p {
+            color: #555555;
+            font-size: 15px;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Capa Simulada do eBook */
+        .ebook-cover {
+            width: 160px;
+            height: 200px;
+            background-color: #d123a4;
+            color: white;
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .ebook-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .ebook-subtitle {
+            font-size: 9px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .ebook-icon {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Faixa amarela de "Exemplo" */
+        .badge-exemplo {
+            background-color: #ffcc00;
+            color: #333;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px 0;
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            width: 110px;
+            transform: rotate(45deg);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Formulário e Inputs */
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            flex: 1;
+        }
+
+        .full-width {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            background-color: #f7f7f7;
+            border-radius: 4px;
+            font-size: 15px;
+            color: #333;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input::placeholder {
+            color: #aaa;
+        }
+
+        input:focus {
+            border-color: #a3339d;
+            background-color: #fff;
+        }
+
+        /* Botão de Ação */
+        .btn-submit {
+            width: 100%;
+            background-color: #b336a3;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: normal;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #942986;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-container">
+        <div class="text-section">
+            <h2>Obtenha seu eBook gratuito!</h2>
+            <p>Por favor, preencha seus dados para receber o material gratuito</p>
+        </div>
+        
+        <div class="ebook-cover">
+            <div class="badge-exemplo">Exemplo</div>
+            <div>
+                <p class="ebook-title">Aprenda a criar ebooks incríveis</p>
+                <p class="ebook-subtitle">10 técnicas para dar um gás na produtividade</p>
+            </div>
+            <div class="ebook-icon">🤘</div>
+        </div>
+    </div>
+
+    <form action="#" method="POST">
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+        </div>
+        
+        <div class="full-width">
+            <input type="tel" id="phone" name="phone" placeholder="Telefone" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Baixar eBook agora!</button>
+    </form>
+</div>
 <div role="main" id="poc-phone-form-79033e8e6b9184c02d63"></div><script type="text/javascript" src="https://d2umgtt5tsqx05.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script><script type="text/javascript"> new RDStationForms('poc-phone-form-79033e8e6b9184c02d63', 'null').createForm();</script>
+
+</body>
+</html>
+
